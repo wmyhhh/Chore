@@ -1,0 +1,15 @@
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# 虚拟环境
+venv/
+env/
+
+# Jupyter 笔记本中间文件
+.ipynb_checkpoints/
+
+# 数据、日志、环境变量
+*.log
+*.csv
+*.env
