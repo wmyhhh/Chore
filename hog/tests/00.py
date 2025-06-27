@@ -8,14 +8,11 @@ test = {
           'code': r"""
           >>> test_dice = make_test_dice(4, 1, 2)
           >>> test_dice()
-          8173f986869be686c354ef4558841f7c
-          # locked
+          4
           >>> test_dice() # Second call
-          c4933a0dd093653b499b3bff4a4c8ec8
-          # locked
+          1
           >>> test_dice() # Third call
-          62a329e8634e8fe7dd0b7f2080aba699
-          # locked
+          2
           >>> test_dice() # Fourth call
           8173f986869be686c354ef4558841f7c
           # locked
