@@ -22,4 +22,4 @@ def denom(x):
     return x[1]
 
 def mul_ration(x,y):
-    return rational(numer(x) * numer(y), denom(x) * demon(y))
+    return rational(numer(x) * numer(y), denom(x) * denom(y))

@@ -8,4 +8,4 @@ p = all(x)
 
 print(tot, max_, p)
 
-print('hereo' in "where's waldo")
+print('here' in "where's waldo")
