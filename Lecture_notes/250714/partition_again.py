@@ -5,7 +5,33 @@ def partition1(m, n):
         return 1
     else:
         return partition1(m - n, n) + partition1(m, n -1)
-    
+'''
+partition1(5, 3)
+├── partition1(2, 3)
+│   ├── partition1(-1, 3) → 0
+│   └── partition1(2, 2)
+│       ├── partition1(0, 2) → 1
+│       └── partition1(2, 1)
+│           ├── partition1(1, 1)
+│           │   ├── partition1(0, 1) → 1
+│           │   └── partition1(1, 0) → 0
+│           └── partition1(2, 0) → 0
+├── partition1(5, 2)
+│   ├── partition1(3, 2)
+│   │   ├── partition1(1, 2)
+│   │   │   ├── partition1(-1, 2) → 0
+│   │   │   └── partition1(1, 1)
+│   │   │       ├── partition1(0, 1) → 1
+│   │   │       └── partition1(1, 0) → 0
+│   │   └── partition1(3, 1)
+│   │       ├── partition1(2, 1)
+│   │       │   ├── partition1(1, 1)
+│   │       │   ├── ...
+│   │       └── ...
+│   └── partition1(5, 1)
+│       ├── ...
+
+'''
 def partition2(m, n):
     if m < 0 or n == 0:
         return []
