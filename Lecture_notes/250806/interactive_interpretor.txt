@@ -1,0 +1,13 @@
+Read - Evaluate - Print Loop
+print a prompt
+read text input from the user
+parse the text input into an expression
+evaluate the expression
+if any error occur report those errors otherwise
+print the value of the expression and repeat
+
+Raising Exceptions
+lexical analysis    e.g. 3.4.5 raises ValueError('invalid numeral')
+syntactic analysis    e.g. an extra ) raises SnytacticError('unexpected token')
+eval    e.g. an empty combination raises TypeError('() is not a number or call expression')
+apply    e.g. no arguments to - raises TypeError('- requires at least one argument')

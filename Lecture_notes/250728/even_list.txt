@@ -1,0 +1,93 @@
+(define (even_subsets s)
+
+    (if (null? s) nil
+
+    (append (even_subsets (cdr s))
+    
+            (map (lambda (t) (cons (car s) t))
+                
+                (if (even? (car s))
+                    (even_subsets((cdr s)))
+                    (odd_subsets((cdr s)))
+                )
+            )
+    
+            (if (even? (car s))
+                (list(list(car s))) 
+                nil)  
+    ))
+)
+
+(define (odd_subsets s)
+
+    (if (null? s) nil
+
+    (append (odd_subsets (cdr s))
+    
+            (map (lambda (t) (cons (car s) t))
+                
+                (if (odd? (car s))
+                    (even_subsets((cdr s)))
+                    (odd_subsets((cdr s)))
+                )
+            )
+    
+            (if (odd? (car s))
+                (list(list(car s))) 
+                nil)  
+    ))
+)
+
+(define (helper f s)
+    (append 
+            (map (lambda (t) (cons (car s) t))
+                
+                (if (f (car s))
+                    (even_subsets(cdr s))
+                    (odd_subsets(cdr s))
+                )
+            )
+    
+            (if (f (car s))
+                (list(list(car s))) 
+                nil)  
+    )    
+)
+
+(define (even_subsets s)
+
+    (if (null? s) nil
+
+    (append (even_subsets (cdr s))
+    
+            (helper even? s)
+    ))
+)
+
+(define (odd_subsets s)
+
+    (if (null? s) nil
+
+    (append (odd_subsets (cdr s))
+    
+            (helper odd? s)  
+    ))
+)
+
+
+(define (subsets s)
+    (if (null? s) nil
+        
+        (let ( (rest (subsets(cdr s))) )
+        (append rest
+               (map (lambda (t) (cons (car s) t)) rest)
+               
+               (list(list(car s))))
+        
+        )
+    )
+)
+
+(define (even s)
+    (filter (lambda (s) (even? (apply + s)) ) subsets(s) )
+)

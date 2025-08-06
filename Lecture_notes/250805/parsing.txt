@@ -1,0 +1,7 @@
+Parsing takes text and returns an expression
+
+text
+ -- lexical analysis
+tokens
+ -- syntactic analysis
+expression

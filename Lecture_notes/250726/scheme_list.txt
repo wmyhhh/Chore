@@ -1,0 +1,23 @@
+scm> (cons 1 (cons 2 nil))
+(1 2)
+scm> (define x (cons 1 (cons 2 (cons 3 (cons 4 nil)))))
+x
+scm> (car x)
+1
+scm> (cdr x)
+(2 3 4)
+scm> (car (cdr x))
+2
+
+scm> (list? x)
+#t
+scm> (list? (car x))
+#f
+scm> (list? (cdr x))
+#t
+scm> (list? nil)
+#t
+scm> (null? 0)
+#f
+scm> (null? x)
+#f

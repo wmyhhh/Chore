@@ -1,0 +1,11 @@
+Machine language
+    a fixed set of instructions invoke implentention by the circuitRy of CPU
+    operations refer to specific hardware memories
+High-level language
+    provide means of abstraction like naming, function, objects
+    imdependent of hardware and OS
+    need compiler or interpretor
+
+A programming language has:
+    Syntax -- 语法
+    Semantics -- 语义
