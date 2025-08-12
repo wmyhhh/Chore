@@ -1,0 +1,37 @@
+Eval
+    base cases:
+        primitive values (numbers)
+        look up value bond to symbols
+    recursive calls:
+        eval(operator, operands) of call expressions
+        apply(procedure, arguments) 
+        eval sub-expressions of special forms (if...)
+Apply
+    base cases:
+        built-in primitive procedures
+    recursive calls:
+        eval (body) of user defined procedures
+
+Special forms
+
+Logical forms
+    if expression：
+        evaluate the predicate -- do_if_form
+        choose a sub-expression -- do_if_form
+        evaluate that sub-expression in place of the whole expression -- scheme_eval
+    and & or
+    cond expression
+
+Quotation
+
+Lambda expression
+
+Define expression
+    (define (<name> <formal parameters) <body>)
+    (define <name> (lambda (<formal parameters) <body>))
+
+Dynamic scope
+    lexical scope
+        -- the parent of a frame is the environment in which a procedure was defined
+    dynamic scope
+        -- -- the parent of a frame is the environment in which a procedure was called
