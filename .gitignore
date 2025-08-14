@@ -13,3 +13,6 @@ env/
 *.log
 *.csv
 *.env
+
+sqlite3.dll
+sqlite3.def

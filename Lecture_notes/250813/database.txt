@@ -1,0 +1,10 @@
+Database Management System (DBMS)
+Structed Querry Language (SQL)
+
+Declarative language -- SQL & prolog
+    a program is a description of disired result
+    the interpreter figure out how to generate the result
+
+Imperative language -- Python & scheme
+    a program is a description of computational processes
+    the interpreter carry out the exacution / evaluation
