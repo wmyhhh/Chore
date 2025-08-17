@@ -19,10 +19,15 @@
 	  ,(cons
 	    'cond
 	    (map (lambda (case) (cons
-	           `(equal? ,val ,(car case))
+	           `(equal? val ,(car case))
 		       (cdr case)))
 		     cases))))
-scm> (switch (+ 1 1) ((1 (print 'a))
-                      (2 (print 'b))
-                      (3 (print 'c))))
-b
+             
+(define-macro (switch expr cases)
+  `(let ((val ,expr))
+     ,(cons
+       'cond
+       (map (lambda (case)
+              (cons `(equal? val ,(car case))
+                    (cdr case)))
+            cases))))

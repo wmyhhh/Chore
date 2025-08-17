@@ -6,5 +6,5 @@ class Tree:
         self.branches =  branches
 
     def is_leaf(self):
-        not self.branches
+        return not self.branches
     

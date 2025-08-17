@@ -8,7 +8,7 @@
 (define (switch expr cases)
     (cons
         `cond
-        (map (lambda (case) (cons '(equal? ,expr ,(car case)) (cdr case)))
+        (map (lambda (case) (cons `(equal? ,expr ,(car case)) (cdr case)))
         cases)
     )
 )
