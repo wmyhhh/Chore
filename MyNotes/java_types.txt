@@ -1,0 +1,38 @@
+java types
+    java has 8 primitive types: byte, short, int, long, float, boolean, double, char
+    each java type has a different way to interpret the bits
+    there is also references to object (by storing the address); references might be null
+
+declaring a variable
+    your computer sets aside exactly enough bits to hold a thing of that types
+    java creates an internal table that maps each variable name to that location
+    java does not write anything into the reserved boxes
+        for safety, java will not let access a variable that is uninitialized
+
+the golden rule of equals
+    given variables y and x
+    y = x copies all the bits from x into y (also known as "pass by value")
+    passing parametres copies the bits
+
+class instantiation     e.g. new Walrus
+    think of 'new' as returning the address of newly created objects
+    addresses in java are 64 bits
+
+reference type variable declarations
+    e.g. Walrus someWalrus; 
+         someWalrus = null;
+    java allocates exactly a box of size 64 bits, no matter what type of object
+    these bits can be set to:
+        Null (all zeros)
+        the 64-bit 'address'of a specific instance of that class (returned by new)
+
+array
+    decleration: 
+        int[] a
+        -> creates a 64-bit box for storing the address
+    instantiation:
+        new int[]{1, 2, 3}
+        -> creates a new object stored somewhere in the computer
+    assignment:
+        =
+        -> puts the address of the new object to the 64-bit box
