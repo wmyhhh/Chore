@@ -27,3 +27,25 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+
+# ===== IntelliJ =====
+.idea/
+*.iml
+out/
+
+# ===== Java 编译文件 =====
+*.class
+
+# ===== Mac 系统文件 =====
+.DS_Store
+
+# ===== Windows 系统文件 =====
+Thumbs.db
+
+# ===== VS Code（如果你偶尔用）=====
+.vscode/
+
+# ===== CS61B 常见 =====
+*.log
+*.jar
