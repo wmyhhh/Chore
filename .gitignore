@@ -1,51 +1,32 @@
-### IntelliJ IDEA ###
+# Java compilation and build output
+*.class
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
 bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+build/
+target/
+.gradle/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
-.vscode/
-
-### Mac OS ###
-.DS_Store
-
-
-# ===== IntelliJ =====
+# IDE and editor state
 .idea/
 *.iml
-out/
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated/
 
-# ===== Java 编译文件 =====
-*.class
-
-# ===== Mac 系统文件 =====
+# Operating-system metadata
 .DS_Store
-
-# ===== Windows 系统文件 =====
 Thumbs.db
 
-# ===== VS Code（如果你偶尔用）=====
-.vscode/
-
-# ===== CS61B 常见 =====
+# Runtime and diagnostic output
 *.log
-*.jar
+hs_err_pid*
+replay_pid*
+*.jfr
+
+# Separate CS 61B repositories kept inside this workspace.
+# Each directory has its own .git metadata and should be committed there.
+/library-sp24/
+/skeleton-sp24/
