@@ -26,7 +26,9 @@ hs_err_pid*
 replay_pid*
 *.jfr
 
-# Separate CS 61B repositories kept inside this workspace.
-# Each directory has its own .git metadata and should be committed there.
+# External course libraries are maintained separately.
 /library-sp24/
-/skeleton-sp24/
+
+# Track skeleton-sp24 source files as part of Chore.
+# Keep the former nested repository's Git history and index only on this machine.
+/.local-git-backups/
